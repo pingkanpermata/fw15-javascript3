@@ -55,3 +55,8 @@ fetchData(apiUrl)
     .catch((error) => {
         console.log(error);
     });
+/* sebuah URL API disimpan diodalam variabel apiUrl. Kemudian sebuah function fetchData() dibuat menggunakan promise.
+function inilah yang mneerima datu parameter berypa URL API yang akan diambil datanya. fetch API ini digunakan untuk 
+mengambil data dari URL API yang kita berikan. jika request berhasil dilakukan, maka response dari API akan diubah ke format JSON
+menggunakan method json(). Lalu promise akan di resolve menggunakan data yang ada didalam format JSON tsb. tetapi, jika trejadi
+error pada saat mengambil data dari API atau resp dari API tidak valid, maka promise akan di reject dengan error message yang sesuai.*/
