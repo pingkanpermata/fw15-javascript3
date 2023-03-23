@@ -39,3 +39,8 @@ const checkHariKerja = async (day) => {
     }
 };
 checkHariKerja("sabtu");
+/* penggunaan try catch ini untuk menangani error yang dihasilkan oleh si async function
+berdasarkan kode diatas, kita mengecek apakah hari yang dimasukkan merupakan hari kerja
+atau tidak dengan menggunakan async/await. jika berhasil, maka hasilnya akan ditampilkan
+pada blok try. tetapi jika terjadi error, makan akan masuk ke blok catch dan menampilkan
+pesan error yang diberikan */
