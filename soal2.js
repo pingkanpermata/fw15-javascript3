@@ -28,3 +28,14 @@ fungsi then akan dipanggil jika promise ini berhasil, dan fungsi catch akan dipa
 promise menghasilkan error. jadi, penggunaan then catch diatas untuk mengecek apakah hari yang dimasukkan
 merupakan hari kerja atau tidak. jika berhasil, maka outputnya akan ditampilkan di blok then
 kalau terjadi error, maka akan masuk ke blok catch dan menampilkan pesan error yang diberikan */
+
+// jika menggunakan try catch
+const checkHariKerja = async (day) => {
+    try {
+        const result = await hariKerja(day);
+        console.log(result);
+    } catch (error) {
+        console.log(error.message);
+    }
+};
+checkHariKerja("sabtu");
