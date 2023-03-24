@@ -1,25 +1,25 @@
 // mendapatkan data user dari API
-// const getUserData = (username) => {
-//     return new Promise((resolve, reject) => {
-//         try {
-//             fetch(`https://api.github.com/users/${username}`)
-//                 .then((response) => response.json())
-//                 .then((data) => resolve(data));
-//         } catch (error) {
-//             reject(`Error: ${error.message}`);
-//         }
-//     });
-// };
+const getUserData = (username) => {
+    return new Promise((resolve, reject) => {
+        try {
+            fetch(`https://api.github.com/users/${username}`)
+                .then((response) => response.json())
+                .then((data) => resolve(data));
+        } catch (error) {
+            reject(`Error: ${error.message}`);
+        }
+    });
+};
 
-// const username = prompt('Masukkan nama pengguna Github:');
+const username = prompt('Masukkan nama pengguna Github:');
 
-// getUserData(username)
-//     .then((userData) => {
-//         console.log(userData);
-//     })
-//     .catch((error) => {
-//         console.error(error);
-//     });
+getUserData(username)
+    .then((userData) => {
+        console.log(userData);
+    })
+    .catch((error) => {
+        console.error(error);
+    });
 /* Fungsi getData() digunakan untuk mengambil data pengguna dari githubAPI
 dengan memberikan username pengguna sbg parameternya. function ini memakai fetch()
 utk memanggil endpoint API dan mengambil responsenya dalam format JSON
